@@ -1,4 +1,4 @@
-# React Tailwindcss MobX Boilerplate build with Vite
+# React Tailwindcss Redux Boilerplate build with Vite
 
 This is a [ReactJS](https://reactjs.org) + [Vite](https://vitejs.dev) boilerplate to be used with [Tailwindcss](https://tailwindcss.com), [Redux](https://redux.js.org/).
 
@@ -21,7 +21,7 @@ This project uses many tools like:
 Create the project.
 
 ```bash
-npx degit https://github.com/manbhasin/vite-react-redux-tailwind-boilerplate my-app
+npx degit https://github.com/devslane/vite-react-redux-tailwind-boilerplate my-app
 ```
 
 Access the project directory.
