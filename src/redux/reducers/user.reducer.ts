@@ -11,8 +11,12 @@ const initialState: UserState = {
   entities: {},
 };
 
-export const userReducer: Reducer<UserState> = (state = initialState, action) =>
-  produce(state, (draft: UserState) => {
+export const userReducer: Reducer<UserState> = (
+  // eslint-disable-next-line @typescript-eslint/default-param-last
+  state: UserState = initialState,
+  action
+) =>
+  produce(state, () => {
     switch (action.type) {
       case AuthActionType.LOGIN_COMPLETED:
       case AuthActionType.FETCH_ME_COMPLETED: {

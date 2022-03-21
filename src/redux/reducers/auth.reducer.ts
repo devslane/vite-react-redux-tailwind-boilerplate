@@ -11,7 +11,8 @@ export interface AuthState {
 const initialState: AuthState = {};
 
 export const authReducer: Reducer<AuthState> = (
-  state = initialState,
+  // eslint-disable-next-line @typescript-eslint/default-param-last
+  state: AuthState = initialState,
   action: any
 ) =>
   produce(state, (draft: AuthState) => {

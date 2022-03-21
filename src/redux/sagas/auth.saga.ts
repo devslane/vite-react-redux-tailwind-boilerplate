@@ -1,4 +1,4 @@
-import { SAGA_PAYLOAD_TYPE } from 'models/types/SagaPayloadType';
+import { SagaPayloadType } from 'models/types/SagaPayloadType';
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { AuthActionType } from 'redux/actions/actions.constants';
 import {
@@ -11,7 +11,7 @@ import {
 import { authService } from 'services/api-services/AuthService';
 import { localStorageService } from 'services/LocalStorageService';
 
-interface LoginSagaPayloadType extends SAGA_PAYLOAD_TYPE {
+interface LoginSagaPayloadType extends SagaPayloadType {
   payload: AuthLoginActionPayloadType;
 }
 

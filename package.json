@@ -28,6 +28,7 @@
     "autoprefixer": "^10.4.1",
     "eslint": "^8.9.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.4",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
@@ -35,6 +36,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-react-redux": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.0",
     "immer": "^9.0.12",
     "lint-staged": "^11.1.2",
@@ -52,7 +55,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "bash scripts/log-alert-hook.sh && lint-staged"
     }
   },
   "lint-staged": {
