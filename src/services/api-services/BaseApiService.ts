@@ -1,3 +1,4 @@
+import ENV_CONFIG from 'constant/env.config';
 import Axios, {
   AxiosRequestConfig,
   AxiosRequestHeaders,
@@ -15,7 +16,7 @@ export declare type QueryParams = {
   [key: string]: string | string[];
 };
 
-const BASE_URL = '';
+const BASE_URL = ENV_CONFIG.BACKEND_URL as string;
 
 export class BaseApiService {
   private static instance: BaseApiService;

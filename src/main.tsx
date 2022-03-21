@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import ENV_CONFIG from 'constant/env.config';
 import App from './App';
 
-// @ts-ignore
-if (process.env.APP_ENV !== 'development') {
+if (ENV_CONFIG.APP_ENV !== 'development') {
   console.log = () => {};
 }
 

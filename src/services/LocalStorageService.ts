@@ -1,4 +1,4 @@
-export const AUTH_TOKEN = 'authToken';
+export const AUTH_TOKEN = 'auth_token';
 
 export class LocalStorageService {
   private static _instance: LocalStorageService;

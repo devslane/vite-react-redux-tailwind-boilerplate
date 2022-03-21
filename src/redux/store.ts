@@ -1,3 +1,4 @@
+import ENV_CONFIG from 'constant/env.config';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 import createSagaMiddleware from 'redux-saga';
@@ -8,7 +9,11 @@ import rootSaga from './sagas';
 /* Root Saga Middleware */
 const sagaMiddleware = createSagaMiddleware();
 
-const middlewares = applyMiddleware(sagaMiddleware, logger);
+let middlewares = applyMiddleware(sagaMiddleware);
+
+if (ENV_CONFIG.APP_ENV === 'development') {
+  middlewares = applyMiddleware(sagaMiddleware, logger);
+}
 
 /* Root Store with all the combined reducers */
 const store = createStore(rootReducer, composeWithDevTools(middlewares));
