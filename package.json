@@ -1,0 +1,68 @@
+{
+  "name": "vite-react-tailwind-redux-setup",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint './src/**/*.{js,ts,tsx}' --fix",
+    "prettify": "prettier -c --write ./src/**/* ",
+    "install:clean": "rm -rf node_modules/ && yarn",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.46.0"
+  },
+  "devDependencies": {
+    "@redux-devtools/extension": "^3.2.2",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/redux-logger": "^3.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.1",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-react-redux": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.0",
+    "immer": "^9.0.12",
+    "lint-staged": "^11.1.2",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3",
+    "reselect": "^4.1.5",
+    "tailwindcss": "^3.0.11",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vite-tsconfig-paths": "^3.3.17"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "bash scripts/log-alert-hook.sh && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx}": [
+      "yarn run lint",
+      "yarn run prettify",
+      "git add --force"
+    ]
+  }
+}
