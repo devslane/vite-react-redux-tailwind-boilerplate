@@ -4,6 +4,7 @@ import Axios, {
   AxiosRequestHeaders,
   CancelToken,
   CancelTokenSource,
+  RawAxiosRequestHeaders,
 } from 'axios';
 import { localStorageService } from '../LocalStorageService';
 
@@ -152,7 +153,7 @@ export class BaseApiService {
   }
 
   generateHeaders = async (
-    headers?: AxiosRequestHeaders,
+    headers?: RawAxiosRequestHeaders,
     useAuth?: boolean
   ) => {
     let defaultHeaders = {};
